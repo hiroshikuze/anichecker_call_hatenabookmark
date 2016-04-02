@@ -2,7 +2,7 @@
 ====
 
 To convert the results of Hatena bookmark API keyword to json.
-I used in [anichecker]:(http://kuze.tsukaeru.jp/tools/anichecker/ "anichecker").
+I used in [anichecker](http://kuze.tsukaeru.jp/tools/anichecker/ "anichecker").
 
 ## Description
 
