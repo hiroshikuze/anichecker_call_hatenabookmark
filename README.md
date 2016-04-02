@@ -20,7 +20,7 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 ## Usage
 
-'q' keyword.
+(get) 'q' keyword.
 
 ## LICENCE
 
