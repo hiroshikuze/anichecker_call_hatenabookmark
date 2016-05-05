@@ -12,7 +12,7 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 <http://kuze.tsukaeru.jp/tools/iphone/anichecker/>
 
-![anichecer_call_hatenabookmark demo image](http://kuze.tsukaeru.jp/tsunezune/imgbox/201604/20160402anichecker__review_preparation/20160402anichecker_review_preparation_sample.png)
+![anichecer_call_hatenabookmark demo image](http://kuze.tsukaeru.jp/tsunezune/imgbox/201605/20160506anichecker_review_preparation/20160506anichecker_review_preparation_sample.png)
 
 ## Reference
 
@@ -20,9 +20,19 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 ## Usage
 
-(get) 'q' keyword.
+(get)
+'q' keyword.
+
+(return)
+'title' title.
+'description' description.
+'link' link url.
+'date' date.
+'subject' subject.
+'hatenabookmarkcount' hatena bookmark count.
+'image_src' image source url.
+'image_alt' image source title.
 
 ## LICENCE
 
 MIT License.
-
