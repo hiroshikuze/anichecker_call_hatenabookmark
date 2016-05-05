@@ -20,18 +20,18 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 ## Usage
 
-(get)
+(get)  
 'q' keyword.
 
-(return)
-'title' title.
-'description' description.
-'link' link url.
-'date' date.
-'subject' subject.
-'hatenabookmarkcount' hatena bookmark count.
-'image_src' image source url.
-'image_alt' image source title.
+(return)  
+'title' title.  
+'description' description.  
+'link' link url.  
+'date' date.  
+'subject' subject.  
+'hatenabookmarkcount' hatena bookmark count.  
+'image_src' image source url.  
+'image_alt' image source title.  
 
 ## LICENCE
 
