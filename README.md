@@ -1,8 +1,9 @@
-#anichecker_call_hatenabookmark
+# anichecker_call_hatenabookmark
+
 ====
 
 To convert the results of Hatena bookmark API keyword to json.
-I used in [anichecker](http://kuze.tsukaeru.jp/tools/anichecker/ "anichecker").
+I used in [anichecker](https://kuje.kousakusyo.info/tools/anichecker/ "anichecker").
 
 ## Description
 
@@ -10,9 +11,9 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 ## Demo
 
-<http://kuze.tsukaeru.jp/tools/iphone/anichecker/>
+<https://kuje.kousakusyo.info/tools/iphone/anichecker/>
 
-![anichecer_call_hatenabookmark demo image](http://kuze.tsukaeru.jp/tsunezune/imgbox/201605/20160506anichecker_review_preparation/20160506anichecker_review_preparation_sample.png)
+![anichecer_call_hatenabookmark demo image](https://kuje.kousakusyo.info/tsunezune/imgbox/201605/20160506anichecker_review_preparation/20160506anichecker_review_preparation_sample.png)
 
 ## Reference
 
