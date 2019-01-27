@@ -1,5 +1,5 @@
 # anichecker_call_hatenabookmark
-====
+___
 
 To convert the results of Hatena bookmark API keyword to json.
 I used in [anichecker](https://kuje.kousakusyo.info/tools/anichecker/ "anichecker").
