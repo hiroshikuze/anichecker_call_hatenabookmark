@@ -1,21 +1,33 @@
 <?php
 /**
- * hatenabookmark
+ * call_hatenabookmark
  */
 if(getenv("REMOTE_ADDR") === "" ||
   !(getenv("REMOTE_ADDR") != "" && current(get_included_files()) === __FILE__)) exit;
+
 if(isset($_GET["q"])) {
     $q = urlencode(htmlspecialchars($_GET["q"], ENT_QUOTES, "UTF-8"));
 } else exit;
-$agent = stream_context_create(
-    array(
-        'http'=>array(
-            'user_agent'=>'anichecker(//kuze.tsukaeru.jp/tools/iphone/anichecker/)'
-        )
-    )
-);
+
+include_once("call_hatenabookmark__config.php");
+$q_hash = hash('sha256', $q);
+$time_start = microtime(true);
+
+//古いキャッシュの削除
+deleteOldFiles();
+
+//キャッシュは存在するか？
+$xml = NULL;
+if(! file_exists(TEMP_FOLDER.$q_hash.".xml")) {
+    //キャッシュが存在しないなら保存
+    $xml = file_get_contents("http://b.hatena.ne.jp/search/title?mode=rss&sort=popular&q=".$q, false, $AGENT);
+    file_put_contents(TEMP_FOLDER.$q_hash.".xml", $xml);
+} else {
+    $xml = file_get_contents(TEMP_FOLDER.$q_hash.".xml", false, $AGENT);
+}
+
+//RSSの解析
 $json = array();
-$xml = file_get_contents("http://b.hatena.ne.jp/search/title?mode=rss&sort=popular&q=".$q, false, $agent);
 $xml2 = $xml;
 $xml2 = str_replace("content:encoded", "content", $xml2);
 $xml2 = str_replace("dc:date", "date", $xml2);
@@ -65,7 +77,27 @@ for($i = 0; $i < count($xml3->item); $i++) {
       );
     array_push($json, $add);
 }
+
+array_push($json, array("processing_time" => (microtime(true) - $time_start)));
+
 header("Content-type: application/json; charset=UTF-8");
 echo json_encode($json);
+
 exit;
-?>
+
+/**
+ * 古いファイルの削除
+ */
+function deleteOldFiles()
+{
+	if(! is_dir(TEMP_FOLDER)) return;
+	
+	$handle = opendir(TEMP_FOLDER);
+	while(($file = readdir($handle)) !== false) {
+		$dir_file = TEMP_FOLDER . $file;
+		if(filetype($dir_file) !== "file") continue;
+		if(time() < filemtime($dir_file) + EFFECTIVE_TIME) continue;
+		if(pathinfo($dir_file, PATHINFO_EXTENSION) !== "xml") continue;
+		unlink($dir_file);
+	}
+}
