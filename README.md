@@ -1,5 +1,4 @@
 # anichecker_call_hatenabookmark
-___
 
 To convert the results of Hatena bookmark API keyword to json.
 I used in [anichecker](https://kuje.kousakusyo.info/tools/anichecker/ "anichecker").
@@ -36,3 +35,12 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 ## LICENCE
 
 MIT License.
+
+## Author
+
+[hiroshikuze](https://github.com/hiroshikuze)
+
+## Donation
+
+[Author's wish list by Amazon(Japanese)](https://www.amazon.jp/hz/wishlist/ls/5BAWD0LZ89V9?ref_=wl_share)
+
