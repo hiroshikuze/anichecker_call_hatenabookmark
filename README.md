@@ -32,6 +32,14 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 'image_src' image source url.  
 'image_alt' image source title.  
 
+## Contribution
+
+1. Fork it ( http://github.com/hiroshikuze/anichecker_call_hatenabookmark/fork )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
 ## LICENCE
 
 MIT License.
