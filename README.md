@@ -1,7 +1,6 @@
-# anichecker_call_hatenabookmark
+# get_searchresult_from_hatenabookmark
 
-To convert the results of Hatena bookmark API keyword to json.
-I used in [anichecker](https://kuje.kousakusyo.info/tools/anichecker/ "anichecker").
+To get the search results of Hatena bookmark API keyword to json.
 
 ## Description
 
@@ -34,7 +33,7 @@ This API will return throw to Hatena bookmark API search keywords that were sent
 
 ## Contribution
 
-1. Fork it ( http://github.com/hiroshikuze/anichecker_call_hatenabookmark/fork )
+1. Fork it ( http://github.com/hiroshikuze/get_searchresult_from_hatenabookmark/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
